@@ -39,8 +39,7 @@ describe 'exhibits namespace rake task' do
         response = solr_client.get '/solr/blacklight-core/admin/file?file=synonyms_left_anchor.txt'
         expect(response).to be_success
         response = solr_client.get '/solr/blacklight-core/admin/file?file=schema.xml'
-        # TODO:  make this string more spotlight/exhibits specific
-        expect(response.body).to match(/Searchworks/m)
+        expect(response.body).to match(/Stanford Exhibits based on SearchWorks/m)
       end
     end
   end
