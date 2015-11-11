@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/sul-dlss/exhibits-solr-conf.svg)](https://travis-ci.org/sul-dlss/exhibits-solr-conf) [![Gem Version](https://badge.fury.io/rb/exhibits-solr-conf.svg)](https://badge.fury.io/rb/exhibits-solr-conf)
+[![Build Status](https://travis-ci.org/sul-dlss/exhibits_solr_conf.svg)](https://travis-ci.org/sul-dlss/exhibits_solr_conf) [![Gem Version](https://badge.fury.io/rb/exhibits_solr_conf.svg)](https://badge.fury.io/rb/exhibits_solr_conf)
 
-# exhibits-solr-conf
+# exhibits_solr_conf
 
 Gem supplying a set of Solr config files and a rake task to use in *testing* sul-dlss exhibit and spotlight git repos, such as:
 
@@ -14,7 +14,7 @@ Production Solr config files for exhibits are part of sul-solr-configs.
 
 Add this line to your engines's Gemfile:
 
-    gem 'exhibits-solr-conf'
+    gem 'exhibits_solr_conf'
 
 And then execute:
 
@@ -26,18 +26,18 @@ Or install it yourself as:
 
 ### Usage
 
-### exhibits-solr-conf rake task
+### exhibits_solr_conf rake task
 
-To use exhibits-solr-conf's rake task, in *your* Rakefile add:
+To use exhibits_solr_conf's rake task, in *your* Rakefile add:
 
 ```ruby
-require 'exhibits-solr-conf'
+require 'exhibits_solr_conf'
 ```
 
 And then you can use the ```exhibits:configure_solr``` rake task. For example:
 
 ```ruby
-require 'exhibits-solr-conf'
+require 'exhibits_solr_conf'
 desc 'Run tests in generated test Rails app with generated Solr instance running'
 task ci: ['engine_cart:generate', 'jetty:clean', 'exhibits:configure_solr'] do
   ENV['environment'] = 'test'
@@ -62,7 +62,7 @@ NOTE:  no quotes around the directory name
 
 ## To update Solr configs for testing:
 
-1. Clone this repo (```git clone git@github.com:sul-dlss/exhibits-solr-conf.git```)
+1. Clone this repo (```git clone git@github.com:sul-dlss/exhibits_solr_conf.git```)
 2. Create your feature branch (```git checkout -b my-solr-config-tweaks```)
 3. Commit your changes (```git commit -am 'Tweak solr configs thus'```)
 4. Push to the branch (```git push origin my-solr-config-tweaks```)

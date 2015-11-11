@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'exhibits-solr-conf/version'
+require 'exhibits_solr_conf/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'exhibits-solr-conf'
+  spec.name          = 'exhibits_solr_conf'
   spec.version       = ExhibitsSolrConf::VERSION
   spec.authors       = ['Naomi Dushay']
   spec.email         = ['ndushay@stanford.edu']
@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Solr config files for testing sul-dlss exhibit and spotlight git repos.'
   spec.description   = 'A set of Solr config files and a rake task for testing sul-dlss exhibit and spotlight git repos (sul-exhibits-templates, spotlight-dor-resources, exhibits-requests'
-  spec.homepage      = 'https://github.com/sul-dlss/exhibits-solr-conf'
+  spec.homepage      = 'https://github.com/sul-dlss/exhibits_solr_conf'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^spec/}) }
   spec.bindir        = 'exe'

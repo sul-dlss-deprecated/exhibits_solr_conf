@@ -5,7 +5,7 @@ require 'jettywrapper'
 
 describe 'exhibits namespace rake task' do
   before do
-    load File.expand_path('../../../lib/exhibits-solr-conf/tasks/configure_solr.rake', __FILE__)
+    load File.expand_path('../../../lib/exhibits_solr_conf/tasks/configure_solr.rake', __FILE__)
   end
 
   describe 'configure_solr' do
