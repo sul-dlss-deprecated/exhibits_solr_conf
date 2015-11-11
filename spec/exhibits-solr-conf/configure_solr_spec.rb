@@ -11,7 +11,7 @@ describe 'exhibits namespace rake task' do
   describe 'configure_solr' do
     it { expect { Rake::Task['exhibits:configure_solr'].invoke }.not_to raise_exception }
 
-    it 'should take an arg for the target solr conf dir' do
+    it 'takes argument for the target solr conf dir' do
       target_dir = "#{File.dirname(__FILE__)}/../../tmp/solr/"
       FileUtils.remove_dir(target_dir) if Dir.exist?(target_dir)
       FileUtils.mkdir_p(target_dir)
@@ -35,7 +35,7 @@ describe 'exhibits namespace rake task' do
       Jettywrapper.wrap(jetty_params) do
         solr_client = Hurley::Client.new('http://127.0.0.1:8983/solr')
         # responds to select
-        response = solr_client.get "/solr/blacklight-core/select?q=*:*"
+        response = solr_client.get '/solr/blacklight-core/select?q=*:*'
         expect(response).to be_success
         # has correct config files
         response = solr_client.get '/solr/blacklight-core/admin/file?file=synonyms_left_anchor.txt'

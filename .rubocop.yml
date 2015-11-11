@@ -1,0 +1,8 @@
+require: rubocop-rspec
+
+inherit_from: .rubocop_todo.yml
+
+# explicitly setting string literals to single quotes quiets hound
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
