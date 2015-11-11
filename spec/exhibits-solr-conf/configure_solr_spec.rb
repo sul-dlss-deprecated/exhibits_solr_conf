@@ -9,8 +9,6 @@ describe 'exhibits namespace rake task' do
   end
 
   describe 'configure_solr' do
-    it { expect { Rake::Task['exhibits:configure_solr'].invoke }.not_to raise_exception }
-
     it 'takes argument for the target solr conf dir' do
       target_dir = "#{File.dirname(__FILE__)}/../../tmp/solr/"
       FileUtils.remove_dir(target_dir) if Dir.exist?(target_dir)
