@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sul-dlss/exhibits-solr-conf.svg)](https://travis-ci.org/sul-dlss/exhibits-solr-conf) [![Gem Version](https://badge.fury.io/rb/exhibits-solr-conf.svg)](https://badge.fury.io/rb/exhibits-solr-conf)
+
 # exhibits-solr-conf
 
 Gem supplying a set of Solr config files and a rake task to use in *testing* sul-dlss exhibit and spotlight git repos, such as:
@@ -54,26 +56,17 @@ The default target directory for solr config files is ```jetty/solr/blacklight-c
 
 You can configure the target directory for the solr config files by passing an argument:
 
-    $ rake exhibits:configure_solr['/my/solr/conf']
+    $ rake exhibits:configure_solr[/my/solr/conf]
+
+NOTE:  no quotes around the directory name
 
 ## To update Solr configs for testing:
 
 1. Clone this repo (```git clone git@github.com:sul-dlss/exhibits-solr-conf.git```)
-2. Create your feature branch (```git checkout -b my-new-feature```)
-3. Commit your changes (```git commit -am 'Add some feature'```)
-4. Push to the branch (```git push origin my-new-feature```)
+2. Create your feature branch (```git checkout -b my-solr-config-tweaks```)
+3. Commit your changes (```git commit -am 'Tweak solr configs thus'```)
+4. Push to the branch (```git push origin my-solr-config-tweaks```)
 5. Create a [Pull Request](https://help.github.com/articles/using-pull-requests/)
-
-
-### TODO:  We need a way to test these, and it should be between steps 2 and 3 above
-
-1. Can we spin up empty Solr index with these configs?  (blacklight-jetty?)
-2. Can we run tests cleanly for 
-  * sul-exhibits-templates
-  * spotlight-dor-resources
-  * exhibits-requests
-3. Can/should this be a travis build?
-
 
 ### To update Solr configs for deployment to production:
 
