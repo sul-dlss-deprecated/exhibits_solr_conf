@@ -724,6 +724,26 @@
       <str name="pf3_number">callnum_search^3</str>
       <str name="pf2_number">callnum_search^2</str>
 
+
+      <!-- for exhibits -->
+      <str name="qf_full_text">
+        full_text_unstem_search^5
+        full_text_search
+      </str>
+      <str name="pf_full_text">
+        full_text_unstem_search^25
+        full_text_search^5
+      </str>
+      <str name="pf3_full_text">
+        full_text_unstem_search^15
+        full_text_search^3
+      </str>
+      <str name="pf2_full_text">
+        full_text_unstem_search^10
+        full_text_search^2
+      </str>
+
+
       <bool name="facet">true</bool>
       <int name="facet.mincount">1</int>
       <int name="facet.limit">21</int>
