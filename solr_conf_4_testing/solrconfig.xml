@@ -107,6 +107,8 @@
         collection_search
         all_unstem_search^5
         all_search                     vern_all_search
+        full_text_unstem_search^2.5
+        full_text_search^0.5
       </str>
       <str name="pf"> <!-- (phrase boost within result set) -->
         title_245a_exact_search^5000
@@ -161,6 +163,8 @@
         collection_search^5
         all_unstem_search^25
         all_search^5                   vern_all_search^5
+        full_text_unstem_search^12.5
+        full_text_search^2.5
       </str>
       <str name="pf3">  <!-- (token trigrams boost within result set) -->
         title_245a_search^1500         vern_title_245a_search^1500
@@ -190,6 +194,7 @@
         award_search^3
         collection_search^3
         all_search^3                   vern_all_search^3
+        full_text_search^1.5
       </str>
       <str name="pf2"> <!--(token bigrams boost within result set) -->
         title_245a_search^1000         vern_title_245a_search^1000
@@ -219,6 +224,7 @@
         award_search^2
         collection_search^2
         all_search^2                   vern_all_search^2
+        full_text_search
       </str>
 
       <str name="qf_cjk">
@@ -757,7 +763,7 @@
       <str name="facet.field">topic_facet</str>
 
       <!-- Highlighting defaults -->
-      <str name="hl.fl">all_search</str>
+      <str name="hl.fl">all_search full_text_search</str>
 
       <str name="fl">
         score,
