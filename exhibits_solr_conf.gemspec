@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'Apache-2.0'
 
   spec.summary       = 'Solr config files for testing sul-dlss exhibit and spotlight git repos.'
-  spec.description   = 'A set of Solr config files and a rake task for testing sul-dlss exhibit and spotlight git repos (sul-exhibits-templates, spotlight-dor-resources, exhibits-requests'
+  spec.description   = 'A set of Solr config files and a rake task for testing sul-dlss exhibit and spotlight git repos (sul_exhibits_templates, spotlight-dor-resources, exhibits_requests'
   spec.homepage      = 'https://github.com/sul-dlss/exhibits_solr_conf'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^spec/}) }
