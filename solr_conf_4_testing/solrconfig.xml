@@ -778,7 +778,9 @@
         <str name="f.format.facet.method">enum</str>
       <str name="facet.field">geographic_facet</str>
       <str name="facet.field">language</str>
-      <str name="facet.field">pub_date</str>
+      <str name="facet.field">pub_date</str> <!-- deprecated -->
+      <str name="facet.field">pub_year_no_approx_isi</str>
+      <str name="facet.field">pub_year_w_approx_isi</str>
       <str name="facet.field">pub_year_tisim</str>
       <str name="facet.field">topic_facet</str>
 
@@ -825,7 +827,6 @@
         production_year_isi,
         original_year_isi,
         copyright_year_isi,
-        pub_date_display,
         summary_display,
         title_245a_display,           vern_title_245a_display,
         title_245c_display,           vern_title_245c_display,
