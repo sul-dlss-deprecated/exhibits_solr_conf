@@ -776,7 +776,6 @@
         <str name="f.genre_ssim.facet.method">enum</str>
       <str name="facet.field">geographic_facet</str>
       <str name="facet.field">language</str>
-      <str name="facet.field">pub_date</str> <!-- deprecated -->
       <str name="facet.field">pub_year_no_approx_isi</str>
       <str name="facet.field">pub_year_w_approx_isi</str>
       <str name="facet.field">pub_year_tisim</str>
@@ -811,7 +810,6 @@
         modsxml,
         oclc,
         physical,                     vern_physical,
-        pub_date,
         publication_year_isi,
         beginning_year_isi,
         earliest_year_isi,
