@@ -144,6 +144,7 @@
     <field name="pub_country" type="text" indexed="true" stored="true" omitNorms="true"/>
     <!-- TODO: should pub_date_search be a date or a text field? -->
     <field name="pub_date_search" type="text" indexed="true" stored="true" omitNorms="true"/>
+    <!-- pub_date_sort now deprecated; replaced by pub_year_isi -->
     <field name="pub_date_sort" type="alphaSort" indexed="true" stored="true" />
     <!-- Pub Date Facet Fields -->
     <!-- pub_year_tisim is for date slider;  pub_year_w_approx_isi/pub_year_no_approx_isi are other facets -->
