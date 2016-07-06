@@ -6,3 +6,6 @@ inherit_from: .rubocop_todo.yml
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: single_quotes
+
+RSpec/ExampleLength:
+  Max: 15
