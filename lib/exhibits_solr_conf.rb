@@ -1,6 +1,7 @@
 require 'exhibits_solr_conf/version'
 
 module ExhibitsSolrConf
-  rake_file_path = File.join(File.dirname(__FILE__), 'exhibits_solr_conf/tasks/*.rake')
-  Dir[File.expand_path(rake_file_path)].each { |ext| load ext } if defined?(Rake)
+  def self.path
+    File.expand_path(File.join(File.dirname(__FILE__), '..', 'solr_conf_4_testing'))
+  end
 end

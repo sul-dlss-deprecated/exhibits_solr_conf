@@ -11,7 +11,16 @@ task ci: [:spec, :rubocop]
 
 task default: :ci
 
-# the next 3 lines are useful for manual testing of THIS gem
-require 'jettywrapper'
-ZIP_URL = 'https://github.com/projectblacklight/blacklight-jetty/archive/v4.10.4.zip'
-require 'exhibits_solr_conf'
+desc 'Run solr with the configuration loaded'
+task :server do
+  require 'solr_wrapper'
+  require 'exhibits_solr_conf'
+
+  SolrWrapper.wrap(port: '8983') do |solr|
+    solr.with_collection(name: 'blacklight-core', dir: ExhibitsSolrConf.path) do
+      loop do
+        sleep 1
+      end
+    end
+  end
+end
