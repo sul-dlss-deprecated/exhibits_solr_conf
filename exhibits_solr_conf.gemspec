@@ -22,8 +22,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.10'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec'
-  spec.add_development_dependency 'jettywrapper'
-  spec.add_development_dependency 'hurley' # for http requests to Solr
+  spec.add_development_dependency 'solr_wrapper'
+  spec.add_development_dependency 'faraday' # for http requests to Solr
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'rubocop-rspec'
 end
