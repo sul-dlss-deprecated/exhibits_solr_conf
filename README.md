@@ -26,39 +26,20 @@ Or install it yourself as:
 
 ### Usage
 
-### exhibits_solr_conf rake task
-
-To use exhibits_solr_conf's rake task, in *your* Rakefile add:
+With SolrWrapper, you can reference the solr configuration provided by this gem:
 
 ```ruby
-require 'exhibits_solr_conf'
-```
-
-And then you can use the ```exhibits:configure_solr``` rake task. For example:
-
-```ruby
-require 'exhibits_solr_conf'
-desc 'Run tests in generated test Rails app with generated Solr instance running'
-task ci: ['engine_cart:generate', 'jetty:clean', 'exhibits:configure_solr'] do
+task :ci do
+  require 'solr_wrapper'
+  require 'exhibits_solr_conf'
   ENV['environment'] = 'test'
-  jetty_params = Jettywrapper.load_config
-
-  Jettywrapper.wrap(jetty_params) do
-    # run the tests
-    Rake::Task['spec'].invoke
+  SolrWrapper.wrap(port: '8983') do |solr|
+    solr.with_collection(name: 'blacklight-core', dir: ExhibitsSolrConf.path) do
+      ...
+    end
   end
 end
 ```
-
-### Configuration
-
-The default target directory for solr config files is ```jetty/solr/blacklight-core/conf/```
-
-You can configure the target directory for the solr config files by passing an argument:
-
-    $ rake exhibits:configure_solr[/my/solr/conf]
-
-NOTE:  no quotes around the directory name
 
 ## To update Solr configs for testing:
 
